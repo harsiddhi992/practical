@@ -1,4 +1,4 @@
-// import "./App.css";
+import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
@@ -10,9 +10,11 @@ import CompanyList from './Components/Company/CompanyList';
 import CategoryList from './Components/Category/CategoryList';
 import Product from './Components/Products/Product';
 import AddProduct from './Components/Products/AddProduct';
+import RegisterForm from './Components/RegisterForm';
 function App() {
   return (
     <>
+    {/* <RegisterForm/> */}
      <Router>
       <Routes>
         <Route exact path="/" element={<Navbar/>} />
@@ -20,6 +22,8 @@ function App() {
         <Route exact path="/company" element={<CompanyList />} />
         <Route exact path="/category" element={<CategoryList />} />
         <Route exact path="/product/:addproduct" element={<AddProduct />} />
+        <Route exact path="/register" element={<RegisterForm />} />
+
 
         {/* <Route path="*" element={<NoMatch />} /> */}
       </Routes>
